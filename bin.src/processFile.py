@@ -29,7 +29,7 @@ import numpy as np
 
 import eups
 import lsst.daf.base               as dafBase
-import lsst.pex.logging            as pexLog
+#import lsst.pex.logging            as pexLog
 import lsst.afw.coord              as afwCoord
 import lsst.afw.geom               as afwGeom
 import lsst.afw.image              as afwImage
@@ -365,8 +365,9 @@ Also includes the PSF model and detection masks.
             print >> sys.stderr, e
 
     if args.loglevel:
-        value = getattr(pexLog.Log, args.loglevel.upper())
-        pexLog.Log.getDefaultLog().setThreshold(value)
+        pass
+#        value = getattr(pexLog.Log, args.loglevel.upper())
+#        pexLog.Log.getDefaultLog().setThreshold(value)
 
     if args.weightFile and args.varianceFile:
         print >> sys.stderr, "Please only specify a weight *or* a variance"
